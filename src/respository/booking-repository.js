@@ -19,19 +19,6 @@ class BookingRepository {
     }
   }
 
-  async update() {
-    try {
-    } catch (error) {
-      if (error.name === "SequelizeValidationError") {
-        throw new ValidationError(error);
-      }
-      throw new AppError(
-        "RepositoryError",
-        "Cannot Update Booking",
-        "There was some issue updating the booking, please try again later",
-        StatusCodes.INTERNAL_SERVER_ERROR
-      );
-    }
-  }
+
 }
 module.exports = BookingRepository;
